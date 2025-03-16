@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحميل ملف</title>
+</head>
+<body>
+
+    <button id="downloadBtn">تحميل الملف</button>
+
+    <script>
+        document.getElementById("downloadBtn").addEventListener("click", function() {
+            // إنشاء عنصر رابط (a)
+            let link = document.createElement("a");
+            link.href = "Test (1).apk"; // استبدل "file.zip" بمسار الملف المطلوب
+            link.download = "Test (1).apk"; // اسم الملف عند التنزيل
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+
+</body>
+</html>
